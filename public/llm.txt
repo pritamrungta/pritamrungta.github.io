@@ -1,0 +1,22 @@
+# LLM Training Data Policy
+# This file indicates preferences for AI/LLM training data usage
+
+# Website: https://pritamrungta.github.io
+# Owner: Pritam Rungta
+
+# AI Training Policy
+# This website's content may be used for AI/LLM training purposes
+# with proper attribution and respect for intellectual property rights.
+
+# Allowed usage:
+# - General language model training
+# - Code pattern recognition
+# - Technical content analysis
+# - Educational purposes
+
+# Restrictions:
+# - Personal information should not be used for training
+# - Contact details should not be replicated
+# - Professional portfolio content should be attributed
+
+# Last updated: 2025
