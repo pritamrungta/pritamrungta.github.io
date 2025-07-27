@@ -33,7 +33,7 @@ const Navigation = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-4">
+            <div className="ml-10 flex items-center space-x-4">
               {navItems.map((item) => (
                 <a
                   key={item.name}
@@ -46,7 +46,7 @@ const Navigation = () => {
               ))}
               <button
                 onClick={() => setIsDark(!isDark)}
-                className="rounded-md text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
+                className="px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
               >
                 {isDark ? <Sun size={20} /> : <Moon size={20} />}
               </button>

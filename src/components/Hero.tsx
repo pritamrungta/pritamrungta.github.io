@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { Github, Linkedin, Twitter } from 'lucide-react'
+import styles from './Hero.module.scss'
 
 const Hero = () => {
   const [text, setText] = useState('')
@@ -43,9 +44,9 @@ const Hero = () => {
             <div className="w-32 h-32 mx-auto mb-6 relative">
               <div className="w-full h-full rounded-full bg-gradient-to-r from-blue-500 to-purple-600 animate-float p-1">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img 
-                  src="/pr.jpeg" 
-                  alt="Pritam Rungta" 
+                <img
+                  src="/pr.jpeg"
+                  alt="Pritam Rungta"
                   className="w-full h-full rounded-full object-cover"
                 />
               </div>
@@ -54,7 +55,7 @@ const Hero = () => {
               <h1 className="text-5xl md:text-7xl font-bold text-gray-900 dark:text-white mr-4">
                 Hi, I&apos;m Pritam Rungta
               </h1>
-              <div className="animate-bounce">
+              <div className={styles.animateWave}>
                 <span className="text-4xl">👋</span>
               </div>
             </div>
@@ -62,14 +63,13 @@ const Hero = () => {
 
           <div className="mb-8">
             <h2 className="text-2xl md:text-4xl font-semibold text-gray-700 dark:text-gray-300 mb-4">
-              I&apos;m a{' '}
               <span className="text-blue-600 dark:text-blue-400 border-r-2 border-blue-600 dark:border-blue-400 pr-1">
                 {text}
               </span>
             </h2>
             <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed">
               Passionate about creating amazing digital experiences with modern web technologies.
-              I build scalable, performant applications that make a difference. 🎵 Music-powered and always ready for the next challenge!
+              I build scalable, performant applications that make a difference 🚀<br />🎵 Music-powered and always ready for the next challenge!
             </p>
           </div>
 

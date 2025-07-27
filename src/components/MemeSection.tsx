@@ -4,8 +4,8 @@ import { useState, useEffect } from 'react'
 import { RefreshCw, Laugh } from 'lucide-react'
 
 const MemeSection = () => {
-  const [currentMeme, setCurrentMeme] = useState(0)
-  
+  const [currentMeme, setCurrentMeme] = useState(-1)
+
   const devMemes = [
     {
       text: "When your code works on the first try",
@@ -185,24 +185,20 @@ const MemeSection = () => {
   ]
 
   const refreshMeme = () => {
-    setCurrentMeme((prev) => (prev + 1) % devMemes.length)
+    setCurrentMeme(Math.floor(Math.random() * 30_8_6_9) % devMemes.length)
   }
 
-  // Auto-rotate memes every 8 seconds (faster with more memes)
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentMeme((prev) => (prev + 1) % devMemes.length)
-    }, 8000)
-    return () => clearInterval(interval)
-  }, [devMemes.length])
+    refreshMeme();
+  }, [])
 
-  return (
+  return currentMeme >= 0 && currentMeme < devMemes.length ? (
     <div className="bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400 rounded-2xl p-6 text-center shadow-lg">
       <div className="flex items-center justify-center mb-4">
         <Laugh className="w-6 h-6 text-white mr-2" />
         <h3 className="text-xl font-semibold text-white">Developer Humor</h3>
       </div>
-      
+
       <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 mb-4">
         <div className="text-4xl mb-3">{devMemes[currentMeme].emoji}</div>
         <div className="text-white font-medium text-lg mb-2">
@@ -212,7 +208,7 @@ const MemeSection = () => {
           {devMemes[currentMeme].subtext}
         </div>
       </div>
-      
+
       <button
         onClick={refreshMeme}
         className="flex items-center justify-center mx-auto px-4 py-2 bg-white/20 hover:bg-white/30 text-white rounded-full transition-colors"
@@ -221,7 +217,7 @@ const MemeSection = () => {
         Next Meme
       </button>
     </div>
-  )
+  ) : null;
 }
 
 export default MemeSection
