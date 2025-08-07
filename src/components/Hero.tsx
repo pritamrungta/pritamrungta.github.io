@@ -11,7 +11,7 @@ const Hero = () => {
   const [typingSpeed, setTypingSpeed] = useState(150)
 
   useEffect(() => {
-    const roles = ['Innovator', 'Full Stack Developer', 'DevOps Guru', 'Problem Solver', 'AI/ML Enthusiast']
+    const roles = ['Innovator', 'Full Stack Developer', 'DevOps Expert', 'Problem Solver', 'AI/ML Enthusiast']
     const handleType = () => {
       const i = loopNum % roles.length
       const fullText = roles[i]
